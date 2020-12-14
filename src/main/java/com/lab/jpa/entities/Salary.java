@@ -32,6 +32,11 @@ public class Salary {
     public void setMoney(int money) {
         this.money = money;
     }
+
+    @Override
+    public String toString() {
+        return "Salary{" + "id=" + id + ", money=" + money + '}';
+    }
        
 
 }

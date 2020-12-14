@@ -80,6 +80,11 @@ public class Employee {
         this.clubs = clubs;
     }
 
+    @Override
+    public String toString() {
+        return "Employee{" + "id=" + id + ", name=" + name + '}';
+    }
+
 
     
 }

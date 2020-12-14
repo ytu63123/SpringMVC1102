@@ -20,7 +20,7 @@
             <div id="main">
                 <div class="header">
                     <h1>社團</h1>
-                    <h2>副標題</h2>
+                    <h2></h2>
                 </div>
                 <table class="pure-table" style="border: none;">
                     <td valign="top">
@@ -36,21 +36,21 @@
                         <!-- 列表 -->
                         <form class="pure-form">
                             <fieldset>
-                                <legend>OOO list</legend>
+                                <legend>Club list</legend>
                                 <table class="pure-table pure-table-bordered" width="100%">
                                     <thead>
                                         <tr>
-                                            <th>欄位一</th>
-                                            <th>欄位二</th>
+                                            <th>ID</th>
+                                            <th>Name</th>
                                         </tr>
                                     </thead>
-
+                                    <c:forEach var="club" items="${club_list}">
                                     <tbody>
                                         <tr>
-                                            <td>A</td>
-                                            <td>B</td>
+                                            <td>${club.id}</td>
+                                            <td>${club.name}</td>
                                         </tr>
-
+                                    </c:forEach>
                                     </tbody>
                                 </table> 
                             </fieldset>

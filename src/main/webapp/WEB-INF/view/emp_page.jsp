@@ -20,7 +20,7 @@
             <div id="main">
                 <div class="header">
                     <h1>員工</h1>
-                    <h2>副標題</h2>
+                    <h2></h2>
                 </div>
                 <table class="pure-table" style="border: none;">
                     <td valign="top">
@@ -36,21 +36,21 @@
                         <!-- 列表 -->
                         <form class="pure-form">
                             <fieldset>
-                                <legend>OOO list</legend>
+                                <legend>Employee list</legend>
                                 <table class="pure-table pure-table-bordered" width="100%">
                                     <thead>
                                         <tr>
-                                            <th>欄位一</th>
-                                            <th>欄位二</th>
+                                            <th>ID</th>
+                                            <th>Name</th>
                                         </tr>
                                     </thead>
-
-                                    <tbody>
-                                        <tr>
-                                            <td>A</td>
-                                            <td>B</td>
-                                        </tr>
-
+                                    <c:forEach var="emp" items="${emp_list}">
+                                        <tbody>
+                                            <tr>
+                                                <td>${emp.id}</td>
+                                                <td>${emp.name}</td>
+                                            </tr>
+                                        </c:forEach>
                                     </tbody>
                                 </table> 
                             </fieldset>
@@ -61,7 +61,7 @@
                         <form class="pure-form">
                             <fieldset>
                                 <legend>OOO chart</legend>
-                                
+
                             </fieldset>
                         </form>
                     </td>
