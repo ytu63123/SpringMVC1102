@@ -12,5 +12,7 @@
         <property name="prefix" value="/WEB-INF/view/"></property>
         <property name="suffix" value=".jsp"></property>
     </bean>
+    
+    <import resource="classpath:jpa-lab-config.xml"></import>
 
 </beans>
