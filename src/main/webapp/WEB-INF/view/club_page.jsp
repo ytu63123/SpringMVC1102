@@ -40,17 +40,19 @@
                                 <table class="pure-table pure-table-bordered" width="100%">
                                     <thead>
                                         <tr>
-                                            <th>ID</th>
-                                            <th>Name</th>
+                                            <th>序號</th>
+                                            <th>名稱</th>
+                                            <th>人數</th>
                                         </tr>
                                     </thead>
-                                    <c:forEach var="club" items="${club_list}">
                                     <tbody>
-                                        <tr>
-                                            <td>${club.id}</td>
-                                            <td>${club.name}</td>
-                                        </tr>
-                                    </c:forEach>
+                                        <c:forEach var="club" items="${club_list}">                                    
+                                            <tr>
+                                                <td>${club.id}</td>
+                                                <td>${club.name}</td>
+                                                <td>${fn:length(club.employees)}</td>
+                                            </tr>
+                                        </c:forEach>
                                     </tbody>
                                 </table> 
                             </fieldset>
@@ -61,7 +63,7 @@
                         <form class="pure-form">
                             <fieldset>
                                 <legend>OOO chart</legend>
-                                
+
                             </fieldset>
                         </form>
                     </td>

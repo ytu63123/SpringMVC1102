@@ -33,10 +33,7 @@ public class Salary {
         this.money = money;
     }
 
-    @Override
-    public String toString() {
-        return "Salary{" + "id=" + id + ", money=" + money + '}';
-    }
+
        
 
 }

@@ -17,7 +17,7 @@ public class EmpController {
 
     @GetMapping(value = {"/"})
     public String read(Model model) {
-        List emp_list = dao.quaryAllEmployee();
+        List emp_list = dao.quaryAllEmps();
         model.addAttribute("emp_list", emp_list);
         return "emp_page";
     }

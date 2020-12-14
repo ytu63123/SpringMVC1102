@@ -17,7 +17,7 @@ public class ClubController {
 
     @GetMapping(value = {"/"})
     public String read(Model model) {
-        List club_list = dao.quaryAllClub();
+        List club_list = dao.quaryAllClubs();
         model.addAttribute("club_list", club_list);
         return "club_page";
     }

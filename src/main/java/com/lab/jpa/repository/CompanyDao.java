@@ -27,12 +27,12 @@ public class CompanyDao {
         return list;
     }
 
-    public List quaryAllClub() {
+    public List quaryAllClubs() {
         List list = getSession().createQuery("from Club c").list();
         return list;
     }
 
-    public List quaryAllEmployee() {
+    public List quaryAllEmps() {
         List list = getSession().createQuery("from Employee e").list();
         return list;
     }
