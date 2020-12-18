@@ -4,8 +4,8 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -13,17 +13,15 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "departments")
 public class Department {
-
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue
     private Integer id;
-   
     @Column
     private String name;
     
     @OneToMany(mappedBy = "department")
-    private Set<Employee> employees=new LinkedHashSet<>();
-
+    private Set<Employee> employees = new LinkedHashSet<>();
+    
     public Integer getId() {
         return id;
     }
@@ -47,8 +45,11 @@ public class Department {
     public void setEmployees(Set<Employee> employees) {
         this.employees = employees;
     }
+
+    @Override
+    public String toString() {
+        return "Department{" + "id=" + id + ", name=" + name + '}';
+    }
+
     
-
-
-
 }
