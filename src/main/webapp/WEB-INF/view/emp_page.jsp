@@ -33,7 +33,9 @@
                                 <legend>Emp Form</legend>
                                 <form:input path="id" readonly="true" /><p />
                                 <form:input path="name" placeholder="請輸入員工名稱" /><p />
+                                <form:errors path="name" style="color:red" /><p />
                                 <form:input path="salary.money" placeholder="請輸入薪資" /><p />
+                                <form:errors path="salary.money" style="color:red" /><p /> 
                                 <form:select path="department.id">
                                     <form:option value="0" label="請選擇" />
                                     <form:options items="${ dept_list }" itemValue="id" itemLabel="name" />
@@ -45,11 +47,12 @@
                                                    checked
                                                </c:if>
                                            </c:forEach>
-                                    > ${ club.name }
+                                           > ${ club.name }
                                 </c:forEach><p />
+                                <form:errors path="*" style="color:red" /><p />                            
                                 <button type="sumbit" class="pure-button pure-button-primary">Submit</button>
                             </fieldset>
-                            
+
                         </form:form>
                     </td>
                     <td valign="top">
@@ -70,17 +73,17 @@
 
                                     <tbody>
                                         <c:forEach var="emp" items="${ emp_list }">
-                                        <tr>
-                                            <td>${ emp.id }</td>
-                                            <td>${ emp.name }</td>
-                                            <td>${ emp.department.name }</td>
-                                            <td>${ emp.salary.money }</td>
-                                            <td>
-                                                <c:forEach var="club" items="${ emp.clubs }">
-                                                    ${ club.name }
-                                                </c:forEach>    
-                                            </td>
-                                        </tr>
+                                            <tr>
+                                                <td>${ emp.id }</td>
+                                                <td>${ emp.name }</td>
+                                                <td>${ emp.department.name }</td>
+                                                <td>${ emp.salary.money }</td>
+                                                <td>
+                                                    <c:forEach var="club" items="${ emp.clubs }">
+                                                        ${ club.name }
+                                                    </c:forEach>    
+                                                </td>
+                                            </tr>
                                         </c:forEach>
                                     </tbody>
                                 </table> 
@@ -92,7 +95,7 @@
                         <form class="pure-form">
                             <fieldset>
                                 <legend>OOO chart</legend>
-                                
+
                             </fieldset>
                         </form>
                     </td>
