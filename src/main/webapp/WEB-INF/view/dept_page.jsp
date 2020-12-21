@@ -33,6 +33,8 @@
                                 <legend>Dept From</legend>
                                 <form:input path="id" readonly="true" /><p />
                                 <form:input path="name" placeholder="請輸入部門名稱:" /><p />
+                                <input type="text" id="_method" name="_method" readonly="true" value="${_method}" /><p />
+                                <form:errors path="*" style="color:red" /><p />
                                 <button type="sumbit" class="pure-button pure-button-primary">Submit</button>
                             </fieldset>
                         </form:form>
@@ -49,6 +51,7 @@
                                             <th>名稱</th>
                                             <th>人數</th>
                                             <th>修改</th>
+                                            <th>刪除</th>
                                         </tr>
                                     </thead>
 
@@ -59,6 +62,7 @@
                                                 <td>${dept.name}</td>
                                                 <td>${fn:length(dept.employees)}</td>
                                                 <td><a href="${pageContext.request.contextPath}/mvc/dept/${dept.id}">修改</a></td>
+                                                <td><a href="${pageContext.request.contextPath}/mvc/dept/delete/${dept.id}">刪除</a></td>
                                             </tr>
                                         </c:forEach>
                                     </tbody>
