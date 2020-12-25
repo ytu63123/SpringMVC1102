@@ -39,7 +39,7 @@
             <artifactId>javax.servlet.jsp.jstl</artifactId>
             <version>1.2.5</version>
         </dependency>
-         <!--加入 Gson 配置-->
+        <!--加入 Gson 配置-->
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
@@ -153,6 +153,14 @@
             <artifactId>hibernate-entitymanager</artifactId>
             <version>${hibernate.version}</version>
         </dependency>
+        
+        <!-- Google api -->
+        <dependency>
+            <groupId>com.google.api-client</groupId>
+            <artifactId>google-api-client</artifactId>
+            <version>1.30.10</version>
+        </dependency>
+
                      
     </dependencies>
 
