@@ -56,6 +56,12 @@
                         </form:form>
                     </td>
                     <td valign="top">
+                        <form class="pure-form">
+                            <fieldset>
+                                <legend>Salary chart</legend>
+                                <%@include file="chart/salary_chart.jspf" %>
+                            </fieldset>
+                        </form>
                         <!-- 列表 -->
                         <form class="pure-form">
                             <fieldset>
@@ -87,15 +93,6 @@
                                         </c:forEach>
                                     </tbody>
                                 </table> 
-                            </fieldset>
-                        </form>
-                    </td>
-                    <td valign="top">
-                        <!-- 圖表 -->
-                        <form class="pure-form">
-                            <fieldset>
-                                <legend>OOO chart</legend>
-
                             </fieldset>
                         </form>
                     </td>
