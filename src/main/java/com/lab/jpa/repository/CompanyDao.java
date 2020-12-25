@@ -53,7 +53,7 @@ public class CompanyDao {
     // 修改部門
     @Transactional
     public void updateDept(Department dept) {
-        getSession().update(dept);
+        getSession().merge(dept);
     }
 
     // 刪除部門
